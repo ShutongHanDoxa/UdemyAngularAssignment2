@@ -1,0 +1,12 @@
+
+<!-- updates a property ('username') via two way binding -->
+<p>Username: </p>
+<input class="form-control" type="text" (input)="checkString()" [(ngModel)]="username">
+
+<!-- output username through {{}} -->
+<p>Your input is {{username}}</p>
+
+<!--Add a button enabled when string is not empty-->
+<!-- upon clicked, reset the username to empty string -->
+<button class="btn btn-primary" [disabled]="isEmpty" (click)="resetToEmptyString()">Reset</button>
+
